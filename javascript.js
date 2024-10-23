@@ -31,5 +31,14 @@ function getComputerChoice(){
    else {return console.log("scissors")}
 
 }
-getComputerChoice();
+getComputerChoice(); // Calls function
 
+// Create function named getHumanChoice
+function getHumanChoice(){
+
+   // Ask user for rock, paper, or scissors
+   let userPrompt = prompt("rock, paper, or scissors?");
+   return userPrompt; // Returns user choice.
+
+}
+getHumanChoice(); // Calls function
