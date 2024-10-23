@@ -42,3 +42,7 @@ function getHumanChoice(){
 
 }
 getHumanChoice(); // Calls function
+
+let humanScore = 0; // Store zero inside human score
+let computerScore = 0; // Store zero inside computer score
+
