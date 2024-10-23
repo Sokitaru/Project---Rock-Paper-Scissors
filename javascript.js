@@ -41,8 +41,50 @@ function getHumanChoice(){
    return userPrompt; // Returns user choice.
 
 }
-getHumanChoice(); // Calls function
+// getHumanChoice(); // Calls function -- testing if it works
 
 let humanScore = 0; // Store zero inside human score
 let computerScore = 0; // Store zero inside computer score
 
+// Create function called play round
+    function playRound(humanChoice,computerChoice){
+        humanChoice.toLowerCase(); // Converts human choice to lower case
+    if (humanChoice === "rock" || computerChoice === "paper"){
+        computerScore++; // Increment computer score
+        return console.log("computer wins")
+
+}   else if (humanChoice === "rock" || computerChoice === "scissors") {
+    humanScore++; // Increment human score
+    return console.log("human wins");}
+
+    else if (humanChoice === "rock" || computerChoice === "rock") {
+        return console.log("tie");
+    }
+    else if (humanChoice === "paper" || computerChoice === "rock") {
+        humanScore++; //Increment human score
+        return console.log("human wins");
+    }
+
+    else if (humanChoice === "paper" || computerChoice === "paper") {
+        return console.log("tie");
+    }
+    else if (humanChoice === "paper" || computerChoice === "scissors") {
+        computerScore++; // Increment computer score
+        return console.log("computer wins");
+    }
+    else if (humanChoice === "scissors" || computerChoice === "rock") {
+        computerScore++; // Increment computer score
+        return console.log("computer wins");
+    }
+    else if (humanChoice === "scissors" || computerChoice === "paper") {
+        humanScore++; //Increment human score
+        return console.log("human wins");
+    }
+    else if (humanChoice === "scissors" || computerChoice === "scissors") {
+        return console.log("tie");
+    }
+    }
+let computerSelection = getComputerChoice(); // Store computer choice in variable
+let humanSelection = getHumanChoice(); // Store human choice in variable
+
+playRound(humanSelection,computerSelection) // Call play round to start
