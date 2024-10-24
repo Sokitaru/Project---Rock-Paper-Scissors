@@ -48,39 +48,39 @@ let computerScore = 0; // Store zero inside computer score
 
 // Create function called play round
     function playRound(humanChoice,computerChoice){
-        humanChoice.toLowerCase(); // Converts human choice to lower case
-    if (humanChoice === "rock" || computerChoice === "paper"){
+       let lowerCase = humanChoice.toLowerCase(); // Converts human choice to lower case
+    if (lowerCase === "rock" || computerChoice === "paper"){
         computerScore++; // Increment computer score
         return console.log("computer wins")
 
-}   else if (humanChoice === "rock" || computerChoice === "scissors") {
+}   else if (lowerCase === "rock" || computerChoice === "scissors") {
     humanScore++; // Increment human score
     return console.log("human wins");}
 
-    else if (humanChoice === "rock" || computerChoice === "rock") {
+    else if (lowerCase === "rock" || computerChoice === "rock") {
         return console.log("tie");
     }
-    else if (humanChoice === "paper" || computerChoice === "rock") {
+    else if (lowerCase === "paper" || computerChoice === "rock") {
         humanScore++; //Increment human score
         return console.log("human wins");
     }
 
-    else if (humanChoice === "paper" || computerChoice === "paper") {
+    else if (lowerCase === "paper" || computerChoice === "paper") {
         return console.log("tie");
     }
-    else if (humanChoice === "paper" || computerChoice === "scissors") {
+    else if (lowerCase === "paper" || computerChoice === "scissors") {
         computerScore++; // Increment computer score
         return console.log("computer wins");
     }
-    else if (humanChoice === "scissors" || computerChoice === "rock") {
+    else if (lowerCase === "scissors" || computerChoice === "rock") {
         computerScore++; // Increment computer score
         return console.log("computer wins");
     }
-    else if (humanChoice === "scissors" || computerChoice === "paper") {
+    else if (lowerCase === "scissors" || computerChoice === "paper") {
         humanScore++; //Increment human score
         return console.log("human wins");
     }
-    else if (humanChoice === "scissors" || computerChoice === "scissors") {
+    else if (lowerCase === "scissors" || computerChoice === "scissors") {
         return console.log("tie");
     }
     }
